@@ -1,19 +1,23 @@
 package ejercicio1;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Book {
     String title;
     double price;
     int stock;
-    String author;
+    List<Author> author;
 
-    public Book (){
+    public  Book (){
     }
-    public Book (String title,double price,int stock,String author){
+    public Book (String title,double price,int stock,List<Author> author){
         this.title = title;
         this.price = price;
         this.stock = stock;
         this.author = author;
     }
+
 
     public String getTitle() {
         return title;
@@ -39,11 +43,11 @@ public class Book {
         this.stock = stock;
     }
 
-    public String getAuthor() {
+    public List<Author> getAuthor() {
         return author;
     }
 
-    public void setAuthor(String author) {
+    public void setAuthor(List<Author> author) {
         this.author = author;
     }
 
@@ -53,5 +57,21 @@ public class Book {
     public int increaseStock(int increase){
         return this.stock = this.stock + increase;
     }
-}
 
+    public String toprintBook (){
+        return ("\n" + this.title + "\n" + this.price+ "\n"  + this.stock + "\n" + this.author.get(0).getName() + " " + this.author.get(0).getSurname());
+    }
+
+    public String toprintBookWithPrice (List<Author> authors){
+        String local = "";
+
+        if(authors.size()>0) {
+            for (Author author:authors) {
+                local = local + "\n" + author.name + " " + author.surname + ".";
+            }
+        }else{
+            local="autor desconocido";
+        }
+        return  "\nEl libro " + this.title + " de: " + local + "\nSe vende a " + this.price + " pesos.";
+    }
+}

@@ -1,11 +1,14 @@
 package ejercicio1;
 
-public class Author extends Book {
+public class Author {
 
     String name;
     String surname;
     String email;
     char gender;
+
+    public  Author(){
+    }
 
     public Author(String name, String surname, String email, char gender) {
         this.name = name;
@@ -14,13 +17,6 @@ public class Author extends Book {
         this.gender = gender;
     }
 
-    public Author(String title, double price, int stock, String author, String name, String surname, String email, char gender) {
-        super(title, price, stock, author);
-        this.name = name;
-        this.surname = surname;
-        this.email = email;
-        this.gender = gender;
-    }
 
     public String getName() {
         return name;
@@ -53,5 +49,6 @@ public class Author extends Book {
     public void setGender(char gender) {
         this.gender = gender;
     }
-}
 
+
+}
