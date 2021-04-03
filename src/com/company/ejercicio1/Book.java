@@ -1,6 +1,5 @@
-package ejercicio1;
+package com.company.ejercicio1;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Book {

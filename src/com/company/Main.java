@@ -3,12 +3,11 @@ package com.company;
 import com.company.ejercicio2.Client;
 import com.company.ejercicio2.Invoice;
 import com.company.ejercicio2.SaleItem;
-import ejercicio1.Author;
-import ejercicio1.Book;
-import java.util.Arrays;
+import com.company.ejercicio1.Author;
+import com.company.ejercicio1.Book;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 
 public class Main {
