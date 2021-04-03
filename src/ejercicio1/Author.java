@@ -2,10 +2,10 @@ package ejercicio1;
 
 public class Author {
 
-    String name;
-    String surname;
-    String email;
-    char gender;
+    public String name;
+    public String surname;
+    private String email;
+    private char gender;
 
     public  Author(){
     }

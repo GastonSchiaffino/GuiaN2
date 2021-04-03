@@ -1,10 +1,15 @@
 package com.company;
 
+import com.company.ejercicio2.Client;
+import com.company.ejercicio2.Invoice;
+import com.company.ejercicio2.SaleItem;
 import ejercicio1.Author;
 import ejercicio1.Book;
-
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
+
 
 public class Main {
 
@@ -18,9 +23,9 @@ public class Main {
         Author author3 = new Author("Ricochet","Frijolito","frijo@email.com",'M');
 
         authors.add(author);
-       authors.add(author1);
-       authors.add(author2);
-       authors.add(author3);
+        authors.add(author1);
+        authors.add(author2);
+        authors.add(author3);
 
         System.out.println("\n" + author.getName() + "\n" + author.getSurname()+ "\n"  + author.getEmail() + "\n" + author.getGender());
 
@@ -43,7 +48,28 @@ public class Main {
         ///Inciso G
         System.out.println(book.toprintBookWithPrice(authors));
 
-        ///Inciso H
+        ///Inciso H (Modificado el g)
+
+        Client client = new Client("Gaston ","gaston@gmail.com ",20);
+
+        System.out.println(client.toPrintClient());
+        SaleItem item1=new SaleItem("Alfajor", "Jorgito",10,50);
+        SaleItem item2=new SaleItem("Tableta de Chocalate-Frutilla", "Cadbury", 200, 5);
+        SaleItem item3=new SaleItem("Chupetin", "Pop",5, 500);
+
+        SaleItem[] items = new SaleItem[3];
+        items[0]=item1;
+        items[1]=item2;
+        items[2]=item3;
+
+        Invoice invoice = new Invoice(items,client);
+        System.out.println(invoice.toPrintInvoice());
+
+
+
+
+
+
 
 
     }

@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Book {
-    String title;
-    double price;
-    int stock;
-    List<Author> author;
+    private String title;
+    private double price;
+    private int stock;
+    private List<Author> author;
 
     public  Book (){
     }
